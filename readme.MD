@@ -1,13 +1,18 @@
 # DSI 2021: Práctica 7 - PE103
 
 Andrés Concepción Afonso
+
 alu0100600216
+
+Informe en Github-Pages
+
+[Informe](https://andrescna.github.io/DSI-P103-E7/docs/)
 
 ## Descripción de la práctica
 
 Desarrolle los siguientes ejercicios en su proyecto TypeScript asociado a la práctica y empuje los cambios al repositorio GitHub correspondiente, una vez haya finalizado:
 
-Utilice un espacio de nombre para generar una FIFO con los métodos 
+Utilice un espacio de nombre para generar una FIFO con los métodos:
 
 - push. Añade un elemento a la cola
 - pop. Extrae el primer elemento insertado en la cola.
@@ -186,7 +191,3 @@ Las estadísticas de cubrimiento del código son:
 ![Istanbul](./docs/istanbul.png)
 
 Falta por cubrir las líneas 39 y 49, que se refieren a los errores lanzados por el método push y pop si se intentan ejecutar cuando la lista está llena o vacía respectivamente.
-
-Informe en Github-Pages
-
-[]()
