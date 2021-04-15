@@ -1,3 +1,11 @@
+/**
+ * Clase genérica Estructura de datos
+ * @param data array de elementos @type T
+ * @param size número de elementos actuales en la estructura
+ * @param maxSize tamaño máximo de la estructura.
+ * Al construir la estructura se incializa vacía y de tamaño @param maxSize
+*/
+
 namespace estructuras {
 
 export class Estructura<T> {
@@ -12,6 +20,11 @@ export class Estructura<T> {
         this.data = new Array<T>(this.maxSize);
     
     }
+    
+    /**
+     * Función getSize(): Devuelve el número de elementos 
+     * @returns @param counter nº de elementos
+    */
 
     public getSize(): number {
         let counter: number = 0;
@@ -23,7 +36,10 @@ export class Estructura<T> {
         return counter;
 
     }
-
+    /**
+     * Función print(): Imprime la cola
+     * @returns cadena con el contenido actual de la cola
+    */
     public print(): string {
         return this.data.join(', ');
         };
