@@ -1,22 +1,19 @@
----
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+# DSI 2021: Práctica 7 - PE103
 
-layout: default
----
-
-# DSI 2021: Práctica 7 MOD
+Andrés Concepción Afonso
+alu0100600216
 
 ## Descripción de la práctica
 
 Desarrolle los siguientes ejercicios en su proyecto TypeScript asociado a la práctica y empuje los cambios al repositorio GitHub correspondiente, una vez haya finalizado:
-Utilice un espacio de nombre para generar una FIFO con los métodos 
-push. Añade un elemento a la cola
-pop. Extrae el primer elemento insertado en la cola.
-pseek. Devuelve el primer elemento insertado en la cola sin extraerlo.
-size. Devuelve el número de elementos que contiene la cola.
-print. Visualiza el contenido de la cola.
-La cola, podrá ser de cualquier tipo de datos, string, number, boolean, etc....
+
+Utilice nombres de espacios diferentes para generar una LIFO y una FIFO con los métodos 
+- push. Añade un elemento a la pila o cola
+- pop. Extrae el ultimo elemento insertado en la pila o extrae el primer elemento insertado en la cola.
+- pseek. Devuelve el ultimo elemento insertado en la pila sin extraerlo o devuelve el primer elemento insertado en la cola sin extraerlo.
+- size. Devuelve el número de elementos que contiene la pila o cola.
+- print. Visualiza el contenido de la pila o cola.
+Tanto la pila como la cola, podrán ser de cualquier tipo de datos, string, number, boolean, etc....
 
 Recuerde que deberá incluir la documentación haciendo uso de TypeDoc, así como seguir una metodología TDD/BDD utilizando el framework de pruebas Mocha y la librería de aserciones Chai. También trate de comprobar el nivel de cubrimiento de su código mediante Instanbul, así como hacer un seguimiento de dicho cubrimiento con Coveralls. Como entrega de esta tarea deberá indicar, de nuevo, el enlace a dicho repositorio GitHub con los ejercicios solicitados.
 
@@ -129,61 +126,17 @@ namespace estructuras {
 }
 ```
 
-Para poder realizar los test con Mocha he tenido que meter el código en un sólo fichero `sin_namespaces.ts`, puesto que me estaba dando errores de importación al intentar ejecutar Mocha con el namespace y no he podido resolverlos en el plazo de realización de la práctica. Los test realizados son: 
 
-```javascript
-import 'mocha';
-import {expect} from 'chai';
-import {Cola} from '../src/sin_namespace';
 
-describe('Pruebas Cola', () => {
-    
-    let cola1 = new Cola(10); 
-    it("Se crea correctamente el objeto cola", () => {
-        expect(cola1).to.exist;
-        expect(cola1).to.be.an.instanceOf(Cola);
-    });
-    it("Método push y getsize", () => {
-        expect(cola1.getSize()).to.be.equal(0);
-        cola1.push(10);
-        cola1.push(20);
-        expect(cola1.getSize()).to.be.equal(2);
-        cola1.pop();
-        cola1.pop();
-    });
-    it("Método pop y getsize", () => {
-        cola1.push(10);
-        cola1.push(20);
-        expect(cola1.getSize()).to.be.equal(2);
-        cola1.pop();
-        expect(cola1.getSize()).to.be.equal(1);
-        cola1.pop();
-        expect(cola1.getSize()).to.be.equal(0);
-    });
-    it("Método pseek", () => {
-        cola1.push(10);
-        cola1.push(20);
-        cola1.push(30);
-        expect(cola1.pseek()).to.be.equal(10);
-        cola1.pop();
-        expect(cola1.pseek()).to.be.equal(20);
-        cola1.pop();
-        cola1.pop();
-    });
-    it("Método print", () => {
-        cola1.push(10);
-        cola1.push(20);
-        cola1.push(30);
-        expect(cola1.print()).to.be.equal("10, 20, 30, , , , , , , ");
-        cola1.pop();
-        expect(cola1.print()).to.be.equal("20, 30, , , , , , , , ");
-    });
 
-});
-```
+Para poder realizar los test con Mocha he tenido que meter el código en un sólo fichero `sin_namespaces.ts`, puesto que me estaba dando errores de importación al intentar ejecutar Mocha con el namespace y no he podido resolverlos en el plazo de realización de la práctica.
 
 Las estadísticas de cubrimiento del código son:
 
-![Istanbul](istanbul.png)
+![Istanbul](./docs/istanbul.png)
 
-Falta por cubrir las líneas 39 y 49, que se refieren a los errores lanzados por el método push y pop si se intentan ejecutar cuando la lista está llena o vacía respectivamente.
+Falta por cubrir las líneas 39 y 49, que se refieren a los errores lanzados por el método push y pop si se intentan ejecutar cuando la lista está llena o vacía respectivamente
+
+Informe en Github-Pages
+
+[]()
