@@ -6,7 +6,7 @@ alu0100600216
 
 Informe en Github-Pages
 
-[Informe](https://andrescna.github.io/DSI-P103-E7/docs/)
+[Informe](https://andrescna.github.io/DSI-P103-E7/)
 
 ## Descripción de la práctica
 
